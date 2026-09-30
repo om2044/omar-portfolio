@@ -1,0 +1,10 @@
+{
+  // Static-only Worker: serves the `out` folder produced by `npm run build:pages`.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "omar-portfolio",
+  "compatibility_date": "2026-09-30",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
