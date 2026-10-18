@@ -1,7 +1,7 @@
 export const site = {
   name: "Omar Ait Bouhmad",
-  title: "Omar Ait Bouhmad — Aspiring Data & AI Engineer",
-  description: "Engineering intelligence from data. Explore the work of Omar Ait Bouhmad, an engineering student at ENSA Agadir working across data, AI, and intelligent systems.",
+  title: "Omar Ait Bouhmad — Data & AI Engineering Student",
+  description: "Data Science, Big Data & AI engineering student at ENSA Agadir, seeking a PFE internship in 2027. Explore projects in machine learning, computer vision, and data engineering.",
   location: "Agadir, Morocco",
   // Add verified destinations here. null renders an honest, accessible placeholder.
   links: {

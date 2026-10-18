@@ -10,11 +10,13 @@ export function EcoVisual() {
       <circle cx="250" cy="140" r="40" fill="#112219" fillOpacity=".75" stroke="#d5f58b66"/><circle cx="250" cy="140" r="5" fill="#d5f58b"/>
     </svg>
     <div className="eco-model-label"><span>PHYSICS</span><span className="model-center">+</span><span>MACHINE LEARNING</span></div>
-    <div className="visual-bottomline"><span>DRIVING DATA</span><div className="diagram-connector" /><span>INTELLIGENT GUIDANCE</span></div>
+    <div className="visual-bottomline"><span>DRIVING DATA</span><div className="diagram-connector" /><span>FUEL ESTIMATION</span></div>
   </div>;
 }
 
 export function ProjectGlyph({ type }: { type: string }) {
+  if (type === "portfolio") return <div className="project-glyph portfolio-glyph" aria-hidden="true"><Braces size={58} strokeWidth={.8} /></div>;
+  if (type === "olist") return <div className="project-glyph warehouse-glyph" aria-hidden="true"><Database size={58} strokeWidth={.8} /></div>;
   if (type === "anomaly") return <div className="project-glyph anomaly-glyph" aria-hidden="true">{Array.from({ length: 36 }, (_, i) => <span key={i} className={i === 15 || i === 20 || i === 21 ? "anomaly-pixel" : ""} style={{ opacity: .35 + ((i * 7) % 11) / 18 }} />)}<ScanLine size={74} strokeWidth={.7} /></div>;
   if (type === "tomato") return <div className="project-glyph stack-glyph" aria-hidden="true"><Layers3 size={64} strokeWidth={.8} /><div><Braces size={16} /><span /><Database size={16} /></div></div>;
   return <div className="project-glyph document-glyph" aria-hidden="true"><span className="ocr-corner"/><span className="ocr-text">Aa</span><span className="ocr-line"/><span className="ocr-line short"/></div>;

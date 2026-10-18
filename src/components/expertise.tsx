@@ -3,10 +3,10 @@ import { Reveal } from "./reveal";
 import { SectionHeading } from "./section-heading";
 
 const expertise = [
-  { title: "Languages", icon: Code2, applied: ["Python", "MATLAB"], toolkit: ["SQL", "JavaScript", "Java", "C", "PL/SQL"], exploring: [] },
-  { title: "Data Engineering", icon: Database, applied: ["Data Processing", "Medallion Pipelines", "SSIS", "Power BI"], toolkit: ["Big Data", "Hadoop", "Spark", "Kafka", "NoSQL"], exploring: [] },
-  { title: "Artificial Intelligence", icon: BrainCircuit, applied: ["Machine Learning", "Deep Learning", "Computer Vision", "TensorFlow", "RAG"], toolkit: ["PyTorch", "Scikit-learn"], exploring: [] },
-  { title: "Backend & Applications", icon: Layers3, applied: ["FastAPI", "React", "PostgreSQL"], toolkit: ["REST APIs", "Docker", "Git", "Linux"], exploring: [] },
+  { title: "Languages", icon: Code2, applied: ["Python", "MATLAB", "SQL", "JavaScript", "TypeScript"], toolkit: ["R", "Java", "C", "PL/SQL"], exploring: [] },
+  { title: "Data Engineering", icon: Database, applied: ["Data Processing", "Medallion Pipelines", "SSIS", "SQL Server"], toolkit: ["Spark", "Databricks", "Kafka", "Airflow", "Power BI", "NoSQL"], exploring: [] },
+  { title: "Artificial Intelligence", icon: BrainCircuit, applied: ["Machine Learning", "Computer Vision", "TensorFlow", "YOLO", "Multimodal LLMs"], toolkit: ["PyTorch", "Scikit-learn", "RAG", "LangChain"], exploring: [] },
+  { title: "Backend & Applications", icon: Layers3, applied: ["FastAPI", "React", "Next.js", "PostgreSQL", "Streamlit", "Plotly", "Docker"], toolkit: ["Flask", "Git", "Linux"], exploring: [] },
   { title: "Engineering Interests", icon: Orbit, applied: [], toolkit: [], exploring: ["System Design", "Cloud Computing", "Distributed Systems", "MLOps"] },
 ];
 

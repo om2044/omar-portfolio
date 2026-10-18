@@ -1,4 +1,17 @@
 /* Editorial sections share the global palette and type tokens. */
+.warehouse-glyph { display: grid; place-items: center; color: #8dbcc5; background: #13222a; }
+.portfolio-glyph { display: grid; place-items: center; color: var(--accent); background: #17211a; }
+.project-thumbnail { display: grid; place-items: center; background: #020617; border: 1px solid #293443; }
+.project-thumbnail img { width: 100%; height: 100%; object-fit: contain; }
+.case-image { margin: 0 0 32px; }
+.case-image > a { display: block; border: 1px solid #354049; border-radius: 5px; overflow: hidden; }
+.case-image img { display: block; width: 100%; height: auto; }
+.case-image figcaption { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 20px; margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.case-image figcaption a, .case-source { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); }
+.case-image figcaption a { flex-shrink: 0; }
+.case-links { display: flex; flex-wrap: wrap; gap: 16px 28px; margin-top: 25px; }
+.case-source { font-size: 14px; border-bottom: 1px solid #536941; padding-bottom: 3px; }
+.case-image a:hover, .case-source:hover { color: #e9ffbd; }
 .hero-contact-link { display: inline-block; font-size: 13px; color: var(--muted); margin-top: 19px; border-bottom: 1px solid #556244; padding-bottom: 2px; }.hero-contact-link:hover { color: var(--accent); }
 .contact-email { display: inline-block; color: var(--accent); font-size: clamp(16px, 2.1vw, 24px); letter-spacing: -.03em; border-bottom: 1px solid #536941; padding-bottom: 5px; margin-top: 30px; overflow-wrap: anywhere; }.contact-email:hover { color: #e9ffbd; }
 .community-entry { margin-top: 25px; padding-top: 23px; border-top: 1px solid var(--border); }.community-entry h3 { font-size: 16px; font-weight: 500; color: var(--text); letter-spacing: -.02em; }.community-entry > span { display: block; font-family: var(--font-mono); font-size: 10px; color: #a4b299; margin: 5px 0 10px; }.community-entry > p { font-size: 14px; margin-bottom: 0; }
