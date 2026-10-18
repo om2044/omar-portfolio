@@ -1,0 +1,5 @@
+import { Reveal } from "./reveal";
+
+export function Beyond() {
+  return <section id="beyond" className="beyond-section container" aria-labelledby="beyond-heading"><Reveal className="beyond-layout"><div><p className="section-index"><span>05</span> / BEYOND THE CODE</p><h2 id="beyond-heading">Always a student.<br /><em>Always building.</em></h2><div className="beyond-values"><span>CURIOSITY</span><span>COMMUNITY</span><span>PURPOSE</span></div></div><div className="beyond-copy"><p>I’m drawn to questions that don’t have obvious answers—and to people who want to build something with the answers they find.</p><div className="community-entry"><h3>Co-founder, AppsBuild Community</h3><span>OCTOBER 2025—PRESENT</span><p>A collaborative space for AI and software development, with technical workshops, peer mentoring, and shared projects.</p></div><div className="community-entry"><h3>Production Manager, ReMedic Box</h3><span>INJAZ AL-MAGHRIB / FEBRUARY—JUNE 2024</span><p>An entrepreneurial healthcare project where I coordinated deadlines and resources in an agile team.</p></div></div></Reveal></section>;
+}
