@@ -1,18 +1,15 @@
-import { Download, MapPin } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Download } from "lucide-react";
 import { ResourceLink } from "./resource-link";
+import { PipelineLab } from "./pipeline-lab";
+import { Reveal } from "./reveal";
 
 export function Hero() {
-  return <section id="top" className="hero container" aria-labelledby="hero-heading">
-    <div className="hero-topline"><span className="eyebrow">PORTFOLIO / 2026—2027</span><span className="hero-location"><MapPin size={13} aria-hidden="true" /> AGADIR, MOROCCO</span></div>
-    <div className="hero-composition">
-      <div className="hero-copy"><p className="hero-role"><span className="line-mark" /> DATA & AI ENGINEERING STUDENT</p>
-        <h1 id="hero-heading">Omar Ait<br />Bouhmad<span className="name-period">.</span></h1>
-        <p className="hero-statement">Engineering intelligence<br /><em>from data.</em></p>
-        <p className="hero-description">I connect data, models, and software to build intelligent systems—with curiosity at the core and real-world usefulness in mind.</p>
-        <div className="hero-actions"><a href="#work" className="button button-primary">Explore my work <span aria-hidden="true" className="button-plus">+</span></a><ResourceLink resource="resume" className="resume-link"><Download size={16} aria-hidden="true" /><span>Download résumé<small>PDF / French · PFE 2027</small></span></ResourceLink></div>
-        <a href="#contact" className="hero-contact-link">Seeking a PFE internship · 2027</a>
-      </div>
+  return <section id="top" className="studio-hero container" aria-labelledby="hero-heading">
+    <div className="studio-topline"><span className="eyebrow">OMAR AIT BOUHMAD / PORTFOLIO 2026–27</span><a href="#contact" className="availability"><span /> OPEN TO PFE · 2027 <ArrowUpRight size={13} /></a></div>
+    <div className="studio-hero-grid">
+      <Reveal className="studio-intro"><p className="studio-kicker">DATA & AI ENGINEERING STUDENT</p><h1 id="hero-heading">From raw data<br />to <span>real-world</span><br /><em>intelligence.</em></h1><p className="studio-description">I’m Omar. I build the connections between data, machine learning, and the applications that make them useful.</p><div className="hero-actions"><a href="#work" className="button button-primary">Explore my projects <ArrowDownRight size={20} /></a><ResourceLink resource="resume" className="resume-link"><Download size={17}/><span>My résumé<small>French · PFE 2027</small></span></ResourceLink></div></Reveal>
+      <Reveal delay={.12} className="studio-lab-wrap"><PipelineLab /></Reveal>
     </div>
-    <div className="hero-footer"><p>Engineering student at <strong>ENSA Agadir</strong></p><span className="hero-disciplines">DATA SCIENCE <span>/</span> BIG DATA <span>/</span> ARTIFICIAL INTELLIGENCE</span><a href="#about" className="scroll-cue"><span className="scroll-line" aria-hidden="true" /> SCROLL TO EXPLORE</a></div>
+    <div className="studio-hero-footer"><p><span>BASED IN MOROCCO</span>Engineering student, ENSA Agadir</p><div className="discipline-line"><span>Data engineering</span><i>↗</i><span>Machine learning</span><i>↗</i><span>Useful software</span></div><a href="#work" aria-label="Scroll to projects"><ArrowDownRight size={24}/></a></div>
   </section>;
 }

@@ -64,3 +64,12 @@ This is a focused manual and source review, not a formal WCAG certification or a
 - Desktop evidence: ../review/portfolio-galerie-ecodrive.png.
 
 This section supersedes earlier résumé and content notes: the current supplied PFE 2027 CV replaces the initial CV, Capgemini is Casablanca, and the case studies follow the latest reports and owner corrections.
+
+## Data studio redesign — 20 October 2026
+- Final webpack static build and TypeScript passed after contrast refinements.
+- Checked 320 px, 390 px, 768 px and desktop: no horizontal overflow.
+- Verified tab keyboard navigation, project filters, native project expansion, enlarged gallery, Escape and focus return.
+- Verified a direct Olist link resets an incompatible Web filter and opens the requested case study.
+- Mobile menu toggling and Escape passed. No browser warnings or errors in the final checks.
+- Contact contrast visually reviewed. Reduced-motion transitions reviewed in source.
+- Public interim version (ce1e537) verified live without the 3D hero. New visual design remains local.

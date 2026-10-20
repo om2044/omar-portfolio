@@ -4,6 +4,7 @@ import "@fontsource-variable/dm-sans";
 import "@fontsource/ibm-plex-mono/400.css";
 import "@fontsource/instrument-serif/400-italic.css";
 import "./globals.css";
+import "./studio.css";
 import { site, getSiteUrl } from "@/lib/site";
 import { MotionProvider } from "@/components/motion-provider";
 
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary", title: site.title, description: site.description },
   robots: { index: true, follow: true },
 };
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#0a0e13", colorScheme: "dark" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#090f1b", colorScheme: "dark" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body><MotionProvider>{children}</MotionProvider></body></html>;

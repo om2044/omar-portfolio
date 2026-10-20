@@ -25,5 +25,5 @@ export const metadata: Metadata = maintenanceMode ? {
 
 export default function Home() {
   if (maintenanceMode) return <MaintenancePage />;
-  return <><ReadingProgress /><a href="#main" className="skip-link">Skip to content</a><Navigation /><main id="main"><Hero /><About /><SelectedWork /><Experience /><Expertise /><Beyond /><Contact /></main><Footer /></>;
+  return <><ReadingProgress /><a href="#main" className="skip-link">Skip to content</a><Navigation /><main id="main"><Hero /><SelectedWork /><About /><Experience /><Expertise /><Beyond /><Contact /></main><Footer /></>;
 }

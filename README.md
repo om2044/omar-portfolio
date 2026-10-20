@@ -153,3 +153,12 @@ The preview is served at `http://127.0.0.1:4173`. The production deployment foll
 - [Static Next.js on Cloudflare Pages](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-static-nextjs-site/)
 - [Cloudflare Pages Git integration](https://developers.cloudflare.com/pages/configuration/git-integration/)
 - [Motion accessibility](https://motion.dev/docs/react-accessibility)
+
+## Visual redesign — 20 October 2026
+
+The public interim release is ce1e537: updated projects and galleries, maintenance removed, 3D hero removed. The new data-studio design is local only. See DESIGN-NOTES.md for references, components, resume instructions, and the deployment boundary. The obsolete sculpture source remains unused; it is not rendered or included by the homepage.
+
+
+## Data studio release
+
+The owner authorized deployment of the interactive redesign on 20 October 2026. This release replaces the interim design with the three-stage SVG workflow, project filters, screenshot cards, refreshed colors and responsive interactions. The static build and TypeScript checks passed before publication.
