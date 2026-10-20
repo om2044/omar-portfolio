@@ -1,5 +1,4 @@
 import { Download, MapPin } from "lucide-react";
-import { SignalField } from "./signal-field";
 import { ResourceLink } from "./resource-link";
 
 export function Hero() {
@@ -13,7 +12,6 @@ export function Hero() {
         <div className="hero-actions"><a href="#work" className="button button-primary">Explore my work <span aria-hidden="true" className="button-plus">+</span></a><ResourceLink resource="resume" className="resume-link"><Download size={16} aria-hidden="true" /><span>Download résumé<small>PDF / French · PFE 2027</small></span></ResourceLink></div>
         <a href="#contact" className="hero-contact-link">Seeking a PFE internship · 2027</a>
       </div>
-      <div className="hero-visual"><SignalField /></div>
     </div>
     <div className="hero-footer"><p>Engineering student at <strong>ENSA Agadir</strong></p><span className="hero-disciplines">DATA SCIENCE <span>/</span> BIG DATA <span>/</span> ARTIFICIAL INTELLIGENCE</span><a href="#about" className="scroll-cue"><span className="scroll-line" aria-hidden="true" /> SCROLL TO EXPLORE</a></div>
   </section>;

@@ -65,19 +65,30 @@ This project is also prepared for Vercel; no Vercel deployment is required for t
 ## Content and links
 
 - `src/lib/site.ts`: name, SEO description, email, GitHub, LinkedIn, and résumé destination.
-- `src/lib/projects.ts`: the four expandable project case studies.
+- `src/lib/projects.ts`: the six expandable project case studies, verified repository and demo links, and optional project images.
 - `src/components/experience.tsx`: professional timeline.
 - `src/components/expertise.tsx`: technology categories and evidence labels.
 - `src/components/about.tsx`, `beyond.tsx`, and `contact.tsx`: personal introduction, community roles, and closing section.
-- `public/Omar-Ait-Bouhmad-Resume.pdf`: the supplied original CV, served by both résumé links.
+- `public/Omar-Ait-Bouhmad-Resume.pdf`: the supplied French PFE 2027 CV, served by both résumé links.
+- `public/projects/`: original project captures supplied by the owner, presented in keyboard-accessible galleries with an enlarged view.
 
 The email address and social destinations are taken from the supplied CV. The LinkedIn address uses the actual hyperlink in the PDF, which is more complete than its displayed label. A `null` resource destination automatically renders a clearly explained placeholder dialog instead of a broken link.
 
 ### Source integrity
 
-The original brief supplies the portfolio structure, current academic year, initial four projects, and ENSA specialization wording. The later CV adds the contact links, more project detail, the NET ALEK internship, and community experience. The owner explicitly confirmed **Casablanca** for Capgemini. The downloadable original CV still says **Agadir** for that internship; the PDF itself has not been edited.
+The October 2026 update uses the owner's supplied `CV_Ait_Bouhmad_Omar_2027.pdf`, the project repositories, and the owner's explicit corrections. The French CV replaces the previous download without altering its contents. The page and CV both identify **Casablanca** for Capgemini. Education is described as the engineering cycle (2024–present), and the internship goal is **PFE 2027**. NYC Taxi is intentionally omitted at the owner's request because it is not ready.
 
-“Applied in projects” reflects the supplied project descriptions and CV; “Broader toolkit” reflects listed skills without specific project evidence; “Exploring / interests” reflects the engineering interests in the brief. These are not skill scores. Fuel/emissions improvements are objectives, and no unprovided accuracy, impact, deployment, award, or project URL is claimed. The 5,000-image dataset and three tomato grades come from the supplied CV.
+The owner confirmed that TomatoGrade's **CNN mode is canceled**. The case study therefore describes YOLO only; TensorFlow remains in the broader toolkit from the CV rather than in this project's stack. The deployed [Hugging Face Space](https://huggingface.co/spaces/om440/tomato-grading-app) was reviewed at commit `77a9f93e935f208c1f7435055747dd4ea6baf57e`. Its [prediction endpoint](https://huggingface.co/spaces/om440/tomato-grading-app/blob/77a9f93e935f208c1f7435055747dd4ea6baf57e/backend/app/api/routes/predict.py) performs background removal and YOLO classification, then saves predictions in PostgreSQL. The Dockerfile and README establish the React / Vite, FastAPI, Neon, and Docker deployment. The portfolio links the demo, deployment source, and original GitHub repository separately.
+
+The reviewed classifier source still labels CNN as pending integration, but this is superseded by the owner's cancellation; it must not be presented as a planned feature. Its model-selection UI does not switch the backend away from YOLO. The displayed 18 ms/frame and 85% threshold are hardcoded UI values, not benchmark evidence. The three class bars read an `all_probabilities` response field that the endpoint does not return, explaining their zero values in the scanner screenshot. That lower-resolution capture is omitted. These findings inform the portfolio wording; the TomatoGrade application itself was not modified.
+
+The three quality grades come from the CV and prediction code. The supplied CV was updated during preparation; the newest file replaces the earlier copy unchanged. The earlier 5,000-image and nine-subsystem counts are omitted to align with that latest version. The included dashboard screenshot illustrates the interface, whose statistics aggregate saved predictions. Its counters, percentage split, and "t" suffix do not establish model accuracy, measured tonnage, or business impact. No industrial production deployment or measured model-performance claims are made.
+
+The [Olist dashboard code](https://github.com/om2044/Olist-BI-Solution-ETL-SSIS-visualisation-/blob/main/Vizualisation/app.py) uses **Streamlit and Plotly**, so those are the technologies credited for the displayed project. Power BI remains in the broader toolkit from the CV. The owner's `portfolio-projects.zip` supplies the original Olist sales, finance, and warehouse captures, ECODRIVE interface and trip analysis captures, anomaly prediction examples, source code, and reports. Only selected images are copied into public assets; datasets, model weights, nested Git metadata, and reports are excluded.
+
+ECODRIVE describes the modeling pipeline, traceability, 30-second features, vehicle-level splits, and simulation / replay interface. Displayed fuel savings are model estimates, not measured on-road gains. The OCR report distinguishes LoRA / Unsloth fine-tuning experiments from the interface prototype, which uses the base vision model via the Hugging Face API. Quantitative evaluation was not completed. Its interface image is extracted unchanged from the supplied report; the owner confirmed that the example data are publicly available and non-confidential. The anomaly source uses an ImageNet-pretrained ResNet18, training its final block and classifier, with augmentation and a stratified split. The gallery shows prediction examples without claiming benchmark accuracy. The portfolio itself is included as requested, with its verified Next.js stack and repository.
+
+“Applied in projects” reflects the supplied project descriptions, code, and CV; “Broader toolkit” reflects listed skills without specific evidence in the displayed projects; “Exploring / interests” reflects the engineering interests in the brief. These are not skill scores.
 
 ## Design and architecture
 
@@ -116,9 +127,24 @@ The geometric visuals are conceptual, not measured project results. All typograp
 - The sculpture supports mouse dragging and a keyboard-accessible rotate button. Touch scrolling is preserved.
 - Continuous motion can be paused; system reduced-motion preferences disable automatic rotation and remove nonessential transitions.
 - Scroll reveals progressively enhance server-rendered content.
+- Project galleries support thumbnails, previous / next controls, arrow keys, and a native modal with Escape to close and focus return.
+- A reading-progress bar follows page scroll. Gallery transitions, case-study reveals, and hover effects respect reduced-motion preferences.
 - Email uses the visitor’s mail app; it does not claim to send a message from the website.
 
 See `QA.md` for the checks completed on this delivery.
+
+## Temporary maintenance and local review
+
+The current portfolio is the public interim release. Set `PORTFOLIO_MAINTENANCE=true` only to restore the maintenance page. The new visual redesign is prepared locally before a separate release. For a static preview in PowerShell:
+
+```powershell
+$env:PORTFOLIO_MAINTENANCE = 'false'
+$env:STATIC_EXPORT = 'true'
+npx next build --webpack
+node scripts/preview-pages.mjs
+```
+
+The preview is served at `http://127.0.0.1:4173`. The production deployment follows the GitHub main branch.
 
 ## Reference documentation
 

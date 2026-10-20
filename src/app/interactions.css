@@ -1,0 +1,42 @@
+.reading-progress { position: fixed; inset: 0 0 auto; height: 3px; background: var(--accent); transform-origin: left; z-index: 60; pointer-events: none; }
+.project-gallery { margin-bottom: 34px; min-width: 0; }
+.gallery-figure { margin: 0; }
+.gallery-open { position: relative; display: grid; place-items: center; width: 100%; padding: 0; overflow: hidden; border: 1px solid var(--border); border-radius: 8px; background: #070b11; }
+.gallery-open > img { display: block; width: 100%; height: auto; max-height: 540px; object-fit: contain; }
+.gallery-enlarge { position: absolute; right: 12px; bottom: 12px; display: flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid #536246; border-radius: 4px; background: #0a0e13ed; color: var(--accent); font-size: 12px; transition: background .2s, transform .2s; }
+.gallery-open:hover .gallery-enlarge { background: #233021; transform: translateY(-3px); }
+.gallery-figure figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.7; min-height: 2.5em; }
+.gallery-controls { display: flex; align-items: center; gap: 12px; margin-top: 14px; }
+.gallery-controls > button, .gallery-dialog button { display: inline-flex; justify-content: center; align-items: center; min-width: 44px; min-height: 44px; border: 1px solid var(--border); border-radius: 5px; transition: color .2s, border-color .2s, background .2s; }
+.gallery-controls button:hover, .gallery-dialog button:hover { color: var(--accent); border-color: #6a8055; background: #d5f58b0a; }
+.gallery-thumbnails { display: flex; gap: 8px; min-width: 0; overflow-x: auto; padding: 6px; }
+.gallery-thumbnails button { padding: 3px; width: 80px; height: 48px; flex-shrink: 0; border: 1px solid var(--border); border-radius: 4px; opacity: .55; transition: opacity .2s, border-color .2s; }
+.gallery-thumbnails button[aria-pressed="true"] { border-color: var(--accent); opacity: 1; }
+.gallery-thumbnails button:hover { opacity: 1; }
+.gallery-thumbnails img { width: 100%; height: 100%; object-fit: contain; }
+.gallery-count { margin-left: auto; white-space: nowrap; font: 11px var(--font-mono); color: var(--muted); }
+.gallery-dialog { margin: auto; padding: 16px; width: min(1500px, calc(100% - 40px)); max-height: calc(100dvh - 40px); overflow: auto; border: 1px solid #48583f; border-radius: 12px; color: var(--text); background: var(--bg); box-shadow: 0 30px 120px #0009; }
+.gallery-dialog::backdrop { background: #04080bed; backdrop-filter: blur(8px); }
+.gallery-dialog > img { display: block; width: 100%; height: auto; max-height: calc(100dvh - 220px); object-fit: contain; }
+.gallery-dialog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 8px 0; }
+.gallery-dialog-toolbar > span { font: 12px var(--font-mono); color: var(--accent); }
+.gallery-dialog-toolbar p { font-size: 12px; line-height: 1.6; color: var(--muted); }
+body:has(.gallery-dialog[open]) { overflow: hidden; }
+.project-glyph { transition: transform .3s; }
+.project-row summary:hover .project-glyph { transform: translateY(-4px); }
+.case-source svg, .resume-link svg { transition: transform .25s; }
+.case-source:hover svg { transform: translate(3px, -3px); }
+.resume-link:hover svg { transform: translateY(3px); }
+.project-details[open] > .case-study { animation: case-enter .35s ease-out; }
+@keyframes case-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 760px) {
+  .gallery-controls { gap: 6px; flex-wrap: wrap; }
+  .gallery-thumbnails { order: 3; width: 100%; justify-content: center; }
+  .gallery-count { margin-right: auto; }
+  .gallery-dialog { width: calc(100% - 20px); padding: 12px; max-height: calc(100dvh - 20px); }
+  .gallery-dialog-toolbar { gap: 10px; }
+  .gallery-enlarge { padding: 6px 8px; bottom: 6px; right: 6px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-row summary:hover .project-glyph, .gallery-open:hover .gallery-enlarge, .case-source:hover svg, .resume-link:hover svg { transform: none; }
+}

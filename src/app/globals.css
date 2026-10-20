@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./sections.css";
+@import "./interactions.css";
 
 @theme inline {
   --color-background: #0a0e13;
@@ -22,7 +23,6 @@ button:disabled { cursor: default; }
 button, input { color: inherit; }
 button { border: 0; background: none; }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 3px; }
-main > section:focus { outline: none; }
 svg { flex-shrink: 0; }
 h1,h2,h3,p { margin: 0; }
 .container { width: min(1320px, calc(100% - 112px)); margin-inline: auto; }
@@ -49,6 +49,8 @@ h1,h2,h3,p { margin: 0; }
 .hero-location { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; }
 .hero-composition { position: relative; display: grid; grid-template-columns: 1.03fr 1fr; align-items: center; min-height: 659px; padding: 43px 0 46px; }
 .hero-copy { position: relative; z-index: 2; }
+.hero-composition { grid-template-columns: 1fr; min-height: 620px; }
+.hero-copy { max-width: 900px; }
 .hero-role { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; color: #bdc5c9; display: flex; align-items: center; gap: 12px; margin-bottom: 23px; }
 .line-mark { width: 20px; height: 1px; background: var(--accent); }
 h1 { font-family: var(--font-display); font-size: clamp(68px, 7.1vw, 104px); line-height: 1.02; letter-spacing: -.07em; font-weight: 500; }

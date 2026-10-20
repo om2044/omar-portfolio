@@ -52,11 +52,15 @@ This is a focused manual and source review, not a formal WCAG certification or a
 - The static export uses a separate command and leaves the standard Vercel build available.
 - Git repository initialized locally on `main`; repository visibility requested by the owner: private.
 
-## Continuation check — 18 October 2026
+## Project galleries and interaction update — 20 October 2026
 
-- Fixed a Motion lifecycle error in the progressive reveal component that could trigger the Next.js development error overlay during Fast Refresh.
-- Removed the browser's oversized default outline from programmatically focused destination sections while preserving visible focus styles on interactive controls.
-- Rechecked the live page at 320, 390, 768, and 1440 CSS-pixel widths with no horizontal overflow.
-- Rechecked the mobile menu, anchored section navigation, and the mutually exclusive project case studies.
-- Browser console remained free of new errors and warnings after a clean reload.
-- `npm run typecheck`, `npm run build`, and `npm run build:pages` passed.
+- Static preview build with Next.js webpack and TypeScript passed after the final OCR addition.
+- Eight original captures across five project galleries: ECODRIVE (2), TomatoGrade (1), Olist (3), OCR (1), anomaly detection (1). The portfolio case study remains the sixth project; NYC Taxi is excluded.
+- Browser checks passed: opening cases with Enter, next-image button, ArrowRight navigation, thumbnail selection, enlarged native dialog, Escape dismissal, and focus return to the opener.
+- Reading progress changes with scroll. Case-study and gallery transitions plus hover effects supplement the existing scroll reveals and interactive sculpture. Reduced-motion handling verified in source.
+- At a 390 × 844 viewport, the gallery and enlarged dialog fit without horizontal page overflow. Original image aspect ratios are retained.
+- OCR and anomaly screenshots loaded successfully. No console warnings or errors during final interaction checks.
+- Default homepage remains maintenance; PORTFOLIO_PREVIEW=true is used only for the local build. No public deployment of these updates was made.
+- Desktop evidence: ../review/portfolio-galerie-ecodrive.png.
+
+This section supersedes earlier résumé and content notes: the current supplied PFE 2027 CV replaces the initial CV, Capgemini is Casablanca, and the case studies follow the latest reports and owner corrections.

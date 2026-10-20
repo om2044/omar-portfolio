@@ -9,7 +9,7 @@ const experiences = [
     role: "AI / Data Engineering Intern",
     description: "Developed ECODRIVE-AI, a pipeline for modeling fuel consumption from real driving data using physical simulation and machine learning.",
     contributions: [
-      ["Physical modeling pipeline", "Nine subsystems · MATLAB / Simulink & Python"],
+      ["Physical modeling pipeline", "MATLAB / Simulink & Python"],
       ["Data preparation & traceability", "Real driving data · SHA-256 hashing"],
       ["Feature engineering", "Exploratory analysis · 30-second sliding windows"],
       ["Fuel-consumption modeling", "Vehicle-level splits · ML / physical-model comparison"],
@@ -20,7 +20,7 @@ const experiences = [
     city: "Agadir, Morocco",
     company: "NETALEK Services",
     role: "Handwriting OCR & Multimodal LLMs Intern",
-    description: "Worked on handwritten text recognition by fine-tuning LLaMA 3.2 Vision on the RIMES dataset.",
+    description: "Explored LLaMA 3.2 Vision fine-tuning on RIMES for handwritten text recognition and built a separate OCR interface prototype using the base model.",
     contributions: [
       ["Multimodal model fine-tuning", "LLaMA 3.2 Vision / RIMES"],
       ["Handwriting recognition", "Document images to text"],

@@ -5,7 +5,7 @@ import { SectionHeading } from "./section-heading";
 const expertise = [
   { title: "Languages", icon: Code2, applied: ["Python", "MATLAB", "SQL", "JavaScript", "TypeScript"], toolkit: ["R", "Java", "C", "PL/SQL"], exploring: [] },
   { title: "Data Engineering", icon: Database, applied: ["Data Processing", "Medallion Pipelines", "SSIS", "SQL Server"], toolkit: ["Spark", "Databricks", "Kafka", "Airflow", "Power BI", "NoSQL"], exploring: [] },
-  { title: "Artificial Intelligence", icon: BrainCircuit, applied: ["Machine Learning", "Computer Vision", "TensorFlow", "YOLO", "Multimodal LLMs"], toolkit: ["PyTorch", "Scikit-learn", "RAG", "LangChain"], exploring: [] },
+  { title: "Artificial Intelligence", icon: BrainCircuit, applied: ["Machine Learning", "Computer Vision", "YOLO", "Multimodal LLMs", "PyTorch"], toolkit: ["TensorFlow", "Scikit-learn", "RAG", "LangChain"], exploring: [] },
   { title: "Backend & Applications", icon: Layers3, applied: ["FastAPI", "React", "Next.js", "PostgreSQL", "Streamlit", "Plotly", "Docker"], toolkit: ["Flask", "Git", "Linux"], exploring: [] },
   { title: "Engineering Interests", icon: Orbit, applied: [], toolkit: [], exploring: ["System Design", "Cloud Computing", "Distributed Systems", "MLOps"] },
 ];
